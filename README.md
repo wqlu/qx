@@ -1,0 +1,2 @@
+# qx
+personal qx conf
