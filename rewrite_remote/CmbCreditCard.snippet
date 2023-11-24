@@ -1,0 +1,9 @@
+#################################
+# 源地址：https://github.com/zirawell/app_remove_ads/blob/main/掌上生活/rewrite/cmbCreditCard.conf
+# 去除掌上生活开屏广告
+#################################
+
+hostname = az*mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com
+
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
+^https:\/\/az\dmbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject-dict
