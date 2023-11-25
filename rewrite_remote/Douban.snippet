@@ -1,0 +1,9 @@
+#####################################
+# 源地址：https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
+# 去除豆瓣开屏广告
+#####################################
+
+hostname=api.douban.com
+
+^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash url reject
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* url reject
