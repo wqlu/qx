@@ -1,0 +1,10 @@
+#################################
+# 修改Safari默认搜索引擎
+# 源地址：https://limbopro.com/archives/21008.html
+#################################
+
+hostname = www.google.cn, www.g.cn
+
+^https?://(www\.)?g\.cn url 302 https://www.google.com
+^https?://(www\.)?google\.cn url 302 https://www.google.com
+^https?://(www\.)?google\.cn/search url 302 https://www.google.com/search
