@@ -30,17 +30,11 @@ $task.fetch(myRequest).then(response => {
     if (usdData) {
         const [currency, code, amount, buyRate, sellRate, cashBuyRate, cashSellRate] = usdData.cell;
         const usdInfo = `
-币种: ${currency}
-代码: ${code}
-金额: ${amount}
-现汇买入价: ${buyRate}
-现汇卖出价: ${sellRate}
-现钞买入价: ${cashBuyRate}
-现钞卖出价: ${cashSellRate}
+现汇卖出价: ${sellRate / 100}
         `.trim();
 
         console.log(usdInfo);
-        $notify("USD Exchange Rate", "Success", usdInfo);
+        $notify("兴业银行美元汇率", usdInfo);
     } else {
         console.log("USD data not found");
         $notify("USD Exchange Rate", "Error", "USD data not found");
