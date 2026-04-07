@@ -23,6 +23,15 @@ if (json.subscription && typeof json.subscription === "object") {
     } else {
         console.log('tier 不是 free，无需修改，当前值为:', json.subscription.tier);
     }
+    
+    // 2. 修改 current_period_end 为 2099年
+    json.subscription.current_period_end = "2099-12-31T23:59:59.999Z";
+    console.log('✓ current_period_end 已修改为 2099-12-31');
+
+    // 可选：同时关闭试用激活（推荐加上）
+    json.subscription.can_activate_trial = false;
+    console.log('✓ can_activate_trial 已设为 false');
+    
 } else {
     console.log('未找到 subscription 对象');
 }
