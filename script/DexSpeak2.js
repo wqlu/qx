@@ -34,7 +34,7 @@ if (json.subscription_level !== undefined) {
     
     // 用量限制大幅提升
     json.quota_total_mapped = 999999;      // 极大配额
-    json.quota_percentage = 100;           // 100% 可用
+    json.quota_percentage = 1;           // 100% 可用
     // quota_used_mapped 和 quota_reset_at 保持原始值不变
     console.log('✓ 用量限制已大幅提升 (quota_total_mapped = 999999, quota_percentage = 100)');
 }
